@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Space3DTesting.unity
+  - enabled: 0
+    path: Assets/scenes/Space3DTesting.unity
     guid: 97ba3b7c2945f4bb99090792bf73f8ff
+  - enabled: 1
+    path: Assets/scenes/XRInteraction.unity
+    guid: e0c544abd1c804c11b49866e197a8199
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: bdb8e3df1cfdf4e22aca151bd8661d4f,
       type: 2}
@@ -17,4 +20,3 @@ EditorBuildSettings:
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a7fbd0314831a411f9655fefa076c600,
       type: 2}
-
