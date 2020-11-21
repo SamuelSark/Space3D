@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/XRInteraction.unity
     guid: e0c544abd1c804c11b49866e197a8199
   - enabled: 1
+    path: Assets/Scenes/WelcomeScreen.unity
+    guid: b6d45c32e4ce04b06a6d097e03a901c8
+  - enabled: 1
     path: Assets/Scenes/Space3DVuforia.unity
     guid: 3cf02998c60c24a0482f510840ab41ae
   m_configObjects:

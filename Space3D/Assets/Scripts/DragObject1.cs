@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Youtube Code Reference: https://www.youtube.com/watch?v=KoPI1-V07aw
+
 public class DragObject1 : MonoBehaviour {
 
  Vector3 dist;
