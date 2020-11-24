@@ -8,7 +8,15 @@ using UnityEngine.SceneManagement;
 public class ScreenManager : MonoBehaviour
 {
     public void StartGame() {
+        SceneManager.LoadScene("Space3DVuforia");
+    }
+
+    public void WelcomeScreen() {
         SceneManager.LoadScene("WelcomeScreen");
+    }
+
+    public void InstructionScreen() {
+        SceneManager.LoadScene("InstructionScreen");
     }
 }
  
