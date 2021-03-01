@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
- using System.Collections;
+using System.Collections;
+using System.IO;
  
  // Code Ref: https://answers.unity.com/questions/1255990/how-to-change-the-color-of-an-object-when-it-colli.html
 
@@ -9,18 +10,34 @@
      public Color wrongColor;
  
  
-     void OnTriggerEnter(Collider other) {
+     int progressCorrect;
+     int progressIncorrect;
+        void OnTriggerEnter(Collider other) {
  
+
+
          if (other.gameObject.CompareTag ("Electron")) 
          {
-             Debug.Log ("It's ALIVE and red");
+             Debug.Log ("correct");
              transform.GetComponent<Renderer>().material.color= correctColor;
+             progressCorrect = 1;
+             progressIncorrect = 0;
+             Debug.Log(progressCorrect);
+
+             File.WriteAllText(Application.dataPath + "/userProgressData.txt", ("Correct = " + progressCorrect)
+                         + "\t Incorrect = " + progressIncorrect);
          }
  
          if (other.gameObject.CompareTag ("Light")) 
          {
-             Debug.Log ("It's ALIVE and blue");
+             Debug.Log ("wrong");
              transform.GetComponent<Renderer>().material.color= wrongColor;
+             progressIncorrect = 1;
+             progressCorrect = 0;
+             Debug.Log(progressIncorrect);
+             File.WriteAllText(Application.dataPath + "/userProgressData.txt", ("Incorrect = " + progressIncorrect 
+                        + "\t Correct = " + progressCorrect));
          }
      }
+
  }

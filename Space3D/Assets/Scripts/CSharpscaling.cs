@@ -14,12 +14,13 @@ public class CSharpscaling : MonoBehaviour {
   int fingersOnScreen = 0;
   
   foreach(Touch touch in Input.touches) {
-   fingersOnScreen++; //Count fingers (or rather touches) on screen as you iterate through all screen touches.
+    //Count number of fingers on screen.
+   fingersOnScreen++; 
    
-   //You need two fingers on screen to pinch.
+   //You need two fingers on screen are required to pinch.
    if(fingersOnScreen == 2){
     
-    //First set the initial distance between fingers so you can compare.
+    //First set the initial distance between fingers so you can compare based on user input.
     if(touch.phase == TouchPhase.Began){
      initialFingersDistance = Vector2.Distance(Input.touches[0].position, Input.touches[1].position);
      initialScale = ScaleTransform.localScale;
@@ -29,7 +30,6 @@ public class CSharpscaling : MonoBehaviour {
      
      float scaleFactor = currentFingersDistance / initialFingersDistance;
      
-     //transform.localScale = initialScale * scaleFactor;
      ScaleTransform.localScale = initialScale * scaleFactor; 
     }
    }

@@ -8,14 +8,17 @@ using UnityEngine.SceneManagement;
 public class ScreenManager : MonoBehaviour
 {
     public void StartGame() {
+        // Load the AR Exercise 
         SceneManager.LoadScene("Space3DVuforia");
     }
 
     public void WelcomeScreen() {
+        // Load the Welcome Screen
         SceneManager.LoadScene("WelcomeScreen");
     }
 
     public void InstructionScreen() {
+        // Load the Instruction Screen
         SceneManager.LoadScene("InstructionScreen");
     }
 }
